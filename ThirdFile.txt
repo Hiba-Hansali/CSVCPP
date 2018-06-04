@@ -1,0 +1,192 @@
+//Plus/Minus
+If ( !txtDisplay-> Text->Contains(“-”))
+{
+ 	txtDisplay->Text = txtDisplay->Text->Remove(0,1);
+}
+else    
+{
+ 	txtDisplay->Text = “-“ + txtDisplay->Text
+}
+}
+private : System: void buttom17_click9system:Objet^ sender, syste::EventArgs^ e){
+	lblshow0p->Text =””,
+iSecondnum Double::Parse(txtDisplay->Text);
+if (iOperator == “+”)
+{
+	iResult = iFirstnum + iSecondnum;
+	txtDisplay->Text = System::Convert::ToString(iResult);
+	listbox1->Items->Add(System::Convert::ToString(lblShow0p->Text));
+}
+else if( i0perator == “-“)
+{
+iResult = iFirstnum - iSecondnum;
+	txtDisplay->Text = System::Convert::ToString(iResult);
+	listbox1->Items->Add(System::Convert::ToString(lblShow0p->Text));
+}
+else if( i0perator == “*“)
+{
+iResult = iFirstnum * iSecondnum;
+	txtDisplay->Text = System::Convert::ToString(iResult);
+	listbox1->Items->Add(System::Convert::ToString(lblShow0p->Text));
+}
+else if( i0perator == “/“)
+{
+iResult = iFirstnum / iSecondnum;
+	txtDisplay->Text = System::Convert::ToString(iResult);
+	listbox1->Items->Add(System::Convert::ToString(lblShow0p->Text));
+}
+else if( i0perator == “Mod“)
+{
+            inti First, iSecond, iResults;
+	iFirst = Convert::ToInt32(iFirstnum) ;
+	iSecond = Covert::ToInt32(iSecondnum);
+
+            iResult = iFirstum % iSecondnum;
+	txtDisplay->Text = System::Convert::ToString(iResult);
+	listbox1->Items->Add(System::Convert::ToString(lblShow0p->Text));
+}
+else if( i0perator == “Exp“)
+    {
+
+	iResult = iFirstnum, (1/iSecondnum;
+	txtDisplay->Text = System::Convert::ToString(iResult);
+	listbox1->Items->Add(System::Convert::ToString(lblShow0p->Text));
+   }
+}
+private : System::Void historyToolStripMenuItem1_Click(System::Object^ sender, System::EventArgs^ e){
+}
+private : System::Void historyToolStripMenuItem1_Click_1(System::Object^ sender, System::EventArgs^ e){
+ 	historyToolStripMenuItem->Visible = true;
+	listbox1->Width = 265;
+	listbox1->Visible = false
+	MyForm::Height = 437;
+	historyToolStripMenuItem->Visible = false;
+}
+private : System::Void historyToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e){
+
+	if (historyToolStripMenuItem->Checked == true)
+{
+	listbox1->Visible = true;
+	historyToolStripMenuItem->Visible = false;
+	historyToolStripMenuItem->Visible = true;
+	MyForm::Height = 600;
+}
+}
+
+private : System::Void button4_Click(System::Object^ sender, System::EventArgs^ e){
+	
+	//backspace
+
+if (txtDisplay-> Text->Length >0
+{
+	txtDisplay->Text = txtDisplay->Text->Remove(txtDisplay->Text->Length -1,1);
+}
+
+private : System::Void button20_Click(System::Object^ sender, System::EventArgs^ e){
+	txtDisplay->Text = (“3,141592653589976323846264338832795”);
+}
+
+private : System::Void button22_Click(System::Object^ sender, System::EventArgs^ e){
+
+	a= Double::Prase(txtDisplay->Text);
+	lblShow0p->Text = System::ToString(“sinh “ +”(“ + (txtDisplay->Text) +”)”);
+	a=Math::Sinh(a);
+	txtDisplay->Text = Sysem::Convert::ToString(a);
+	listbox1->Items->Add(lblShow0p->Text);
+}
+
+private : System::Void button25_Click(System::Object^ sender, System::EventArgs^ e){
+
+	a = Double::Prase(txtDisplay->Text);
+	lblShow0p->Text  = System::Convert::ToString(“Cosh “ +”(“ + (txtDisplay->Text) + “)”);
+	listbox1->Items->Add(System::Convert::ToString(lblShow0p->Text));
+	a= Math::Cosh(a);
+private: System::Void button24_Click(System::Object^ sender, System::EventArgs^ e {
+
+	a = Double::Prase(txtDisplat->Text);
+             lblShow0p->Text = System::ConvertToString(“Tanh“ + “(“ + (txtDisplay->Text) +”)”);
+	listbox1->Items->Add(System::Convert::ToString(lblShow0p->Text));
+
+   
+1013 -txtDisplay->Text = System::Convert::ToString(a);
+}
+
+private: System::Void button27_Click(System::Object^ sender, System::EventArgs^ e {
+
+	//Code for Cos
+
+	a = Double::Prase(txtDisplay->Text);
+	lblShow0p->Text = System::ConvertToString(“Cosd “ + “(“ + (txtDisplay->Text) +”)”);
+	listbox1->Items->Add(System::Convert::ToString(lblShow0p->Text));
+	a = Math::Cos(a);
+	txtDisplay->Text = System::Convert::ToString(a);
+}
+
+
+
+private: System::Void button23_Click(System::Object^ sender, System::EventArgs^ e {
+//sin
+  	a= Double::Prase
+	lblShow0p->Text = System::ConvertToString(“Sind“ + “(“ + (txtDisplay->Text) +”)”);
+	listbox1->Items->Add(System::Convert::ToString(lblShow0p->Text));
+	a = Math::Sin(a);
+	txtDisplay->Text = System::Convert::ToString(a);
+}
+
+	
+
+private: System::Void button31_Click(System::Object^ sender, System::EventArgs^ e {
+
+int a = int::Prase(txtDisplay->Text);
+txtDisplay->Text = System::Convert::ToString(a);//denary/decimal
+listbox1->Items->Add(System::Convert::ToString(txtDisplay->Text));///
+}
+
+ 
+private: System::Void button38_Click(System::Object^ sender, System::EventArgs^ e {
+
+
+
+	//Log
+	a = Double::Prase(txtDisplay->Text);
+	lblShow0p->Text = System::ConvertToString(“Log“ + “(“ + (txtDisplay->Text) +”)”);
+	listbox1->Items->Add(System::Convert::ToString(lblShow0p->Text));
+	a = Math::Log(a);
+	txtDisplay->Text = System::Convert::ToString(a);
+}
+ 
+
+
+
+private: System::Void button36_Click(System::Object^ sender, System::EventArgs^ e {
+
+	a = Double::Prase(txtDisplat->Text);
+	a = math::Sqrt(a);
+	txtDisplay->Text = System::Convert::ToString(a);
+             listbox1->Items->Add(System::Convert::ToString(txtDisplay->Text));///
+}
+
+private: System::Void button32_Click(System::Object^ sender, System::EventArgs^ e {
+
+
+	int a  = int::Prase(txtDisplay->Text);
+	txtDisplay->Test = System::Convert::ToString(a,16);
+lblShow0p->Text = “”;
+}
+private: System::Void button33_Click(System::Object^ sender, System::EventArgs^ e {
+
+//binary
+
+	int a = int::Prase(txtDisplay->Text);
+	txtDisplay->Text = System::Convert::ToString(a,8);
+	lblShow0p->Text=””;
+}
+private: System::Void button35_Click(System::Object^ sender, System::EventArgs^ e {
+
+
+ 
+};
+}
+
+
+
