@@ -1,0 +1,134 @@
+double iFirstnum;
+double iSecondnum;
+double iResult;
+double a;
+String^ iOperator;
+float iCelsius, iFahrenheit,iKevin;
+char iOperation;
+
+
+MyForm ::Width = 300 ;
+MyForm ::Height =437 ;
+TxtDisplay-> Width = 266 ;
+HistoryToolStripMenuItem->Visible=false;
+
+
+Application::Exit();
+MyForm ::Width = 600 ;
+TxtDisplay-> Width = 556 ;
+
+MyForm ::Width = 1161 ;
+TxtDisplay-> Width = 556 ;
+//Buttons Numbers
+Button ^Numbers =safe_cast<Button^>(sender);
+If(txtDisplay->Text ==”0”)
+{
+
+}
+else
+{ txtDisplay->Text= txtDisplay->Text + Numbers->Text;
+}
+
+txtDisplay->Clear();
+//Decimal Point
+if ( !txtDisplay->Text ->Contains(“.“))
+{
+txtDisplay->Text= txtDisplay->Text +“.“;
+}
+//Operators
+Button ^ op= safe_cast<Button^>(sender);
+iFirstnum=Double::Parse(txtDisplay->Text);
+txtDisplay->Text= ““;
+iOperator=op->Text;
+lblShowOp-> Text=System::Convert::ToString(iFirstnum) +” ”+ iOperator;
+//Plus/Minus
+if ( txtDisplay->Text ->Contains(“-“))
+{
+txtDisplay->Text= txtDisplay->Text ->Remove(0 ,1);
+} 
+else
+{ txtDisplay->Text=“-“ +  txtDisplay->Text + Numbers->Text;
+}
+//lblShowOp->Text =””;
+iSecondnum =Double::Parse(txtDisplay->Text);
+if(iOperator ==”+”)
+{
+iResult=iFirstnum +iSecondnum;
+txtDisplay->Text=System::Convert::ToString(iResult);
+listBox1->Items->Add(System::Convert::ToString(lblShowOp->Text));
+}
+else if(iOperator ==”-”)
+{
+iResult=iFirstnum -iSecondnum;
+txtDisplay->Text=System::Convert::ToString(iResult);
+listBox1->Items->Add(System::Convert::ToString(lblShowOp->Text));
+}
+else if(iOperator ==”*”)
+{
+iResult=iFirstnum *iSecondnum;
+txtDisplay->Text=System::Convert::ToString(iResult);
+listBox1->Items->Add(System::Convert::ToString(lblShowOp->Text));
+}
+else if(iOperator ==”/”)
+{
+iResult=iFirstnum /iSecondnum;
+txtDisplay->Text=System::Convert::ToString(iResult);
+listBox1->Items->Add(System::Convert::ToString(lblShowOp->Text));
+}
+else if(iOperator ==”Mod”)
+{
+Int iFirst,iSecond,iResults;
+iFirst=Convert::ToInt32(iFirstnum);
+iSecond=Convert::ToInt32(iSecondnum);
+iResults= iFirst %iSecond;
+txtDisplay->Text=System::Convert::ToString(iResults);
+listBox1->Items->Add(System::Convert::ToString(lblShowOp->Text));
+}
+else if(iOperator ==”Exp”)
+{
+iResult=(iFirstnum,(1/ iSecondnum));
+txtDisplay->Text=System::Convert::ToString(Math::Exp((iResults)));
+listBox1->Items->Add(System::Convert::ToString(lblShowOp->Text));
+}
+}
+historyToolSrtipMenuItem->Visible=true;
+listbox1->Width=265;
+listbox1->Visible=false;
+MyForm::Height=437;
+historyToolSrtipMenuItem->Visible=false;
+if( historyToolSrtipMenuItem->Checked==true)
+{listBox1->Visible=true;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
