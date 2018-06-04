@@ -1,0 +1,100 @@
+
+//tan
+a=Double::Parse(txtDisplay->Text);
+lblShowOp->Text = System::Convert::ToString("tand " + "(" + (txtDisplay->Text) + ")");
+listBox1->Items->Add(System::Convert::ToString(lblShowOp->Text));
+a =Math::Tan(a);
+txtDisplay->Text = System::Convert::ToString(a);
+----------------------------------------------------------------------------------
+//Hex
+int a = int::Parse(txtDisplay->Text);
+txtDisplay->Text =  System::Convert::ToString(a, 16);
+lblShowOp->Text= "";
+----------------------------------------------------------------------------------------------------------------------
+//Ocat
+int a = int::Parse(txtDisplay->Text);
+txtDisplay->Text =  System::Convert::ToString(a, 8);
+lblShowOp->Text= "";
+---------------------------------------------------------------------------------------------------------------------------
+//x^2
+a =Convert::ToDouble(txtDisplay->Text) * Convert::ToDouble(txtDisplay->Text);
+txtDisplay->Text = Convert::ToString(a);
+--------------------------------------------------------------------------------------------------------------------------------
+//x^3 
+a =Convert::ToDouble(txtDisplay->Text) * Convert::ToDouble(txtDisplay->Text)* Convert::ToDouble(txtDisplay->Text);
+txtDisplay->Text = Convert::ToString(a);
+-----------------------------------------------------------------------------------------------------------------------------
+//   1/x
+a =Convert::ToDouble(1.0 / Convert::ToDouble(txtDisplay -> Text));
+txtDisplay->Text = Convert::ToString(a);
+-------------------------------------------------------------------------------------------------------------------------------  
+//ln x
+a = System::Math::Log(Convert::ToDouble(txtDisplay -> Text));
+txtDisplay->Text = Convert::ToString(a);
+----------------------------------------------------------------------------------------------------------------------------
+//%
+a =Convert::ToDouble(txtDisplay->Text)  /  Convert::ToDouble(100);
+txtDisplay->Text = Convert::ToString(a);
+-----------------------------------------------------------------------------------------------------------------------------
+iOperation = ' C ' ;
+------------------------------------------------------------------------------
+iOperation = ' C ' ;
+-----------------------------------------------------------------------------
+iOperation = ' K ' ;
+------------------------------------------------------------------------------
+///
+switch(iOperation)
+{
+case 'C' :
+// Celsius  to Fahrenheit
+(float::TryParse(txtConvert->Text, iCelsius ));
+lblConvert-> Text =   ((((9  * iCelsius )  / 5)+ 32).ToString());
+break;
+case 'F' :
+// Fahrenheit to Celsius
+(float::TryParse(txtConvert->Text, iFahrenheit ));
+lblConvert-> Text =   ((((iFahrenheit - 32) * 5) / 9). ToString());
+break;
+case 'K' :
+//Convert to Kevin
+(float::TryParse(txtConvert->Text, iKevin));
+lblConvert-> Text =   ((((9  * iKevin )  / 5)+ 32) +273.15). ToString());
+break;
+ ----------------------------------------------------------------------------------------------------
+//Reset
+lblConvert->Text ="";
+txtConvert->Text="";
+radioButton1->Checked= false;
+radioButton2->Checked= false;
+radioButton3->Checked= false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
